@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: cakedekho-vendor-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: SHOPIFY_STORE_DOMAIN
+        sync: false
+      - key: SHOPIFY_ACCESS_TOKEN
+        sync: false
+      - key: ADMIN_EMAIL
+        value: janakbajaj99@gmail.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: MEMBERSHIP_FEE
+        value: "499"
+      - key: MARKETPLACE_COMMISSION_PERCENT
+        value: "15"
